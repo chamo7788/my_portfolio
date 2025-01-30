@@ -1,0 +1,99 @@
+.project {
+    padding: 0 12.22%;
+    margin-top: 200px;
+}
+
+.timeline-card {
+    position: relative;
+    background: #1d1836;
+    border: 1px solid #1f2a41;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 450px;
+}
+
+.timeline-card ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.timeline-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+    background-color: #ffffff;
+}
+
+.timeline-card h6 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.timeline-card li {
+    margin-bottom: 8px;
+}
+
+.timeline-card .MuiTypography-subtitle2 {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.tech-stack h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+
+}
+.tech-stack p {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.tech-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.tech-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+}
+
+.tech-item:hover img {
+    transform: scale(1.1);
+}
+
+

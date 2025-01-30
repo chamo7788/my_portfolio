@@ -1,0 +1,81 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    height: 8%;
+    top: -5px;
+}
+
+/* Initial transparent navbar */
+.navbar:not(.scrolled) {
+    background: transparent; /* Transparent on initial load */
+    box-shadow: none; /* No shadow */
+}
+
+/* Navbar with background after scrolling */
+.navbar.scrolled {
+    background: #050816; /* Background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin-left: 80px;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 130px;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-list a:hover {
+    color: #00bcd4;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    .nav-list {
+        display: none; /* Hide navigation by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        background: #050816; /* Add background for the dropdown */
+        border-radius: 5px;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show menu when active */
+    }
+}

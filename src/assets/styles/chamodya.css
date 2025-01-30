@@ -1,0 +1,92 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Introduction Text */
+.intro {
+    flex: 1;
+    padding: 20px;
+    margin-left: 150px;
+    z-index: 2;
+    margin-top: -350px;
+}
+
+.intro h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.purple-text {
+    color: #7f1dbb;
+}
+
+.typed-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Profile and Desk Images */
+.images {
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #7f1dbb;
+    object-fit: cover;
+    background-color: white;
+    margin-top: -150px;
+    margin-right: 100px;
+}
+
+.desk-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Backdrop */
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to bottom,
+            rgba(2, 1, 47, 0) 0%,      /* Fully transparent at the top */
+            rgba(30, 27, 142, 0.6) 40%, /* Light transition layer starts */
+            rgba(5, 3, 110, 1) 50%,   /* Brightest in the middle */
+            rgba(30, 27, 142, 0.6) 60%, /* Light transition layer fades out */
+            rgba(2, 1, 47, 0) 100%    /* Fully transparent at the bottom */
+    );
+    z-index: -1;
+    opacity: 0.8; /* Optional overall transparency */
+}
+
+
+
+.three-d-model {
+    position: absolute;
+    width: 100%;
+    height: 650px; 
+    margin-left: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Background color for contrast */
+    overflow: hidden; /* Ensures the content stays within the rounded corners */
+}

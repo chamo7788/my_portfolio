@@ -1,0 +1,72 @@
+.about {
+    padding: 50px;
+    color: #ffffff;
+    margin-left: 150px;
+}
+
+.section-header {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #a9b1d6;
+    margin-bottom: 10px;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #b0b9cf;
+    margin-top: 16px;
+}
+
+.service-cards-container {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.service-card {
+    width: 100%;
+    max-width: 250px;
+}
+
+.service-card-inner {
+    width: 100%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 1px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-content {
+    background: #231e63;
+    border-radius: 20px;
+    padding: 20px 48px;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.service-card-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.service-card-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+}
