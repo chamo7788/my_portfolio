@@ -36,10 +36,10 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   const services = [
-    { title: "AI/ML Enthusiast", icon: {AI} },
-    { title: "Frontend Developer", icon: {Development} },
-    { title: "Backend Developer", icon: {Development} },
-    { title: "Content Creator", icon: {Content} },
+    { title: "AI/ML Enthusiast", icon: AI },
+    { title: "Frontend Developer", icon: Development },
+    { title: "Backend Developer", icon: Development },
+    { title: "Content Creator", icon: Content },
   ];
 
   return (
