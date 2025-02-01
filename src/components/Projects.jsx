@@ -88,7 +88,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/USJP Logo.png"
+                                src="/USJP Logo.png"
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />

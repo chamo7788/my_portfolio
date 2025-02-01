@@ -7,7 +7,7 @@ import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../components/Loader";
-import myImage from '../assets/images/profile-image.png';
+import myImage from '../assets/images/profile.png';
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/models/scene.gltf");
