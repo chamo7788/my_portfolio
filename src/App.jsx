@@ -1,11 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Chamodya from './components/Chamodya';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Home from './pages/Home';
+import { Navbar, Chamodya, About, Projects, Contact} from './components';
 
 function App() {
   return (

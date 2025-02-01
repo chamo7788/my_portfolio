@@ -54,6 +54,144 @@
 .tech-stack h2 {
     font-size: 1.5rem;
     margin-bottom: 30px;
+}
+
+.tech-stack p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.tech-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.tech-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+}
+
+.tech-item:hover img {
+    transform: scale(1.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-secondary {
+    color: #aaa;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.ml-5 {
+    margin-left: 20px;
+}
+
+.space-y-2 > * + * {
+    margin-top: 8px;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.pl-1 {
+    padding-left: 4px;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.text-center-1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.tech-stack {
+    
+    margin-top: 200px;
+}
+.tech-stack h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 
 }
 .tech-stack p {
@@ -96,4 +234,49 @@
     transform: scale(1.1);
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tech-stack {
+        padding: 0 5%;
+    }
 
+    .tech-stack h2 {
+        font-size: 1.2rem;
+    }
+
+    .tech-stack p {
+        font-size: 1.5rem;
+    }
+
+    .tech-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tech-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack {
+        padding: 0 2%;
+    }
+
+    .tech-stack h2 {
+        font-size: 1rem;
+    }
+
+    .tech-stack p {
+        font-size: 1.2rem;
+    }
+
+    .tech-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-item p {
+        font-size: 0.8rem;
+    }
+}
