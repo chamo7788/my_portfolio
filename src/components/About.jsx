@@ -3,6 +3,9 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import '../assets/styles/about.css'; // Make sure to create a CSS file for custom styling.
 import { fadeIn, textVariant } from "../components/utils/motion";
+import AI from '../assets/images/AIM.png';
+import Development from '../assets/images/development.png';
+import Content from '../assets/images/content.png';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='service-card'>
@@ -33,10 +36,10 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   const services = [
-    { title: "AI/ML Enthusiast", icon: "src/assets/images/AIM.png" },
-    { title: "Frontend Developer", icon: "src/assets/images/development.png" },
-    { title: "Backend Developer", icon: "src/assets/images/development.png" },
-    { title: "Content Creator", icon: "src/assets/images/content.png" },
+    { title: "AI/ML Enthusiast", icon: {AI} },
+    { title: "Frontend Developer", icon: {Development} },
+    { title: "Backend Developer", icon: {Development} },
+    { title: "Content Creator", icon: {Content} },
   ];
 
   return (
