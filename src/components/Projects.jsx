@@ -9,6 +9,9 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 import '../assets/styles/project.css';
 import StackIcon from "tech-stack-icons";
+import IIT from '../assets/images/IIT Logo.png';
+import USJP from '../assets/images/USJP Logo.png';
+import IEEE from '../assets/images/IEEE Logo.png';
 
 const Projects = () => {
     const techStack = [
@@ -45,7 +48,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IIT Logo.png"
+                                src={IIT}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -88,7 +91,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="/USJP Logo.png"
+                                src={USJP}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -126,7 +129,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IIT Logo.png"
+                                src={IIT}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -169,7 +172,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IEEE Logo.png"
+                                src={IEEE}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -209,7 +212,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IIT Logo.png"
+                                src={IIT}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -248,7 +251,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IIT Logo.png"
+                                src={IIT}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
@@ -284,7 +287,7 @@ const Projects = () => {
                         <TimelineConnector sx={{backgroundColor: '#ffffff', height: '5px'}}/>
                         <TimelineDot>
                             <img
-                                src="src/assets/images/IIT Logo.png"
+                                src={IIT}
                                 alt="Institute Logo"
                                 className="timeline-logo"
                             />
