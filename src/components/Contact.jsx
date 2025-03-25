@@ -76,7 +76,7 @@ export default function Contact() {
                     ))}
                 </div>
                 <a
-                    href="/path/to/your-cv.pdf"
+                    href="https://drive.google.com/file/d/1g3I07OMh2gB8jeOTYlhziOd8J4jsfeSp/view?usp=sharing"
                     className="download-cv-button"
                     download
                 >
