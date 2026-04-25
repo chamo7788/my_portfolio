@@ -1,15 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import '../assets/styles/navbar.css';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu toggle state
     const [isScrolled, setIsScrolled] = useState(false); // Scroll state
+    const [activeSection, setActiveSection] = useState('about');
 
     // Handle scroll event
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50); // Add background after scrolling 50px
+
+            const sections = ['about', 'projects', 'contact'];
+            const scrollPosition = window.scrollY + 180;
+
+            for (const id of sections) {
+                const section = document.getElementById(id);
+                if (
+                    section &&
+                    scrollPosition >= section.offsetTop &&
+                    scrollPosition < section.offsetTop + section.offsetHeight
+                ) {
+                    setActiveSection(id);
+                    break;
+                }
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -28,23 +43,23 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <p className="logo">My Portfolio | Chamodya Ganegamage</p>
             {/* Toggle Button */}
-            <button className="menu-toggle" onClick={toggleMenu}>
+            <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu" aria-expanded={isMenuOpen}>
                 ☰
             </button>
             {/* Navigation Links */}
             <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
                 <li>
-                    <a href="#about" onClick={() => setIsMenuOpen(false)}>
+                    <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="#projects" onClick={() => setIsMenuOpen(false)}>
+                    <a href="#projects" className={activeSection === 'projects' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                    <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>
                         Contact
                     </a>
                 </li>

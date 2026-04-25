@@ -12,6 +12,7 @@ const Home = () => {
       <div className="backdrop"></div>
 
       <div className="intro">
+        <p className="hero-pill">Available for internships and freelance work</p>
         <h1>Hi, I&apos;m <span className="purple-text">Chamodya</span></h1>
         <ReactTyped
           className="typed-text"
@@ -20,6 +21,14 @@ const Home = () => {
           backSpeed={80}
           loop
         />
+        <p className="hero-description">
+          I design and build modern digital products with clean code, scalable architecture,
+          and delightful user experiences.
+        </p>
+        <div className="hero-actions">
+          <a href="#projects" className="btn btn-primary">View Projects</a>
+          <a href="#contact" className="btn btn-outline">Let&apos;s Connect</a>
+        </div>
       </div>
       
       <div className="images">
@@ -29,8 +38,9 @@ const Home = () => {
           className="profile-image"
         />
       </div>
-
-      
+      <a href="#about" className="scroll-indicator" aria-label="Scroll to About section">
+        <span></span>
+      </a>
     </div>
   );
 };

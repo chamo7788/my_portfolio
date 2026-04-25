@@ -43,11 +43,11 @@ const ExperienceCard = ({ project }) => {
 const Projects = () => {
     return (
         <div id="projects" className="project">
-            <motion.div variants={textVariant()}>
+            <motion.div variants={textVariant()} className="projects-heading">
                 <p className="text-center">What I have done so far</p>
                 <h2 className="text-center-1">Projects</h2>
             </motion.div>
-            <div className='mt-20 flex flex-col'>
+            <div className='mt-20 flex flex-col timeline-wrapper'>
                 <VerticalTimeline>
                     {ProjectDetails.map((project, index) => (
                         <ExperienceCard key={`project-${index}`} project={project} />
@@ -56,7 +56,7 @@ const Projects = () => {
             </div>
             <section className="tech-stack">
                 <h2>Tech Stack</h2>
-                <p>What I Have Been Using</p>
+                <p className="tech-stack-copy">What I Have Been Using</p>
                 <a href="https://skillicons.dev" target="_blank" rel="noreferrer" aria-label="My Skills">
                     <img
                         className="tech-stack-badge"
