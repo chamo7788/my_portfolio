@@ -4,7 +4,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import { motion } from 'framer-motion';
 import { textVariant } from './utils/motion';
 import { ProjectDetails } from './projectDetails';
-import StackIcon from "tech-stack-icons";
 import '../assets/styles/project.css';
 
 const ExperienceCard = ({ project }) => {
@@ -42,26 +41,6 @@ const ExperienceCard = ({ project }) => {
 };
 
 const Projects = () => {
-    const techStack = [
-        { name: "html5", label: "HTML5" },
-        { name: "css3", label: "CSS3" },
-        { name: "js", label: "JavaScript" },
-        { name: "reactjs", label: "React" },
-        { name: "nodejs", label: "Node.js" },
-        { name: "json", label: "JSON" },
-        { name: "nestjs", label: "NestJS" },
-        { name: "postgresql", label: "PostgreSQL" },
-        { name: "postman", label: "Postman" },
-        { name: "git", label: "Git" },
-        { name: "github", label: "GitHub" },
-        { name: "figma", label: "Figma" },
-        { name: "python", label: "Python" },
-        { name: "java", label: "Java" },
-        { name: "spring", label: "Spring" },
-        { name: "bootstrap4", label: "Bootstrap" },
-        { name: "mysql", label: "MySQL" },
-    ];
-
     return (
         <div id="projects" className="project">
             <motion.div variants={textVariant()}>
@@ -78,14 +57,13 @@ const Projects = () => {
             <section className="tech-stack">
                 <h2>Tech Stack</h2>
                 <p>What I Have Been Using</p>
-                <div className="tech-icons">
-                    {techStack.map((tech) => (
-                        <div className="tech-item" key={tech.name}>
-                            <StackIcon name={tech.name} />
-                            <p>{tech.label}</p>
-                        </div>
-                    ))}
-                </div>
+                <a href="https://skillicons.dev" target="_blank" rel="noreferrer" aria-label="My Skills">
+                    <img
+                        className="tech-stack-badge"
+                        src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nestjs,dotnet,cs,java,python,vite,threejs,nodejs,npm,postgres,supabase,firebase,prisma,aws,vercel,githubactions,git,github,postman,figma,mui,tailwind,vscode,kali,reddot"
+                        alt="My Skills"
+                    />
+                </a>
             </section>
 
         </div>

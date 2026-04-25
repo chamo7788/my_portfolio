@@ -61,6 +61,14 @@
     font-weight: bold;
 }
 
+.tech-stack-badge {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .tech-icons {
     display: flex;
     justify-content: center;

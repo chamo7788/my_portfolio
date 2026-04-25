@@ -1,46 +1,64 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import "../assets/styles/contact.css";
 import { FaLinkedin, FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 // Animated Background Component
 function AnimatedBackground({ interval = 100 }) {
-    let prevTime;
+    const prevTimeRef = React.useRef();
+    const frameRef = React.useRef();
     const ref = React.useRef(null);
 
     function getRandomSpawnLocation() {
+        const parent = ref.current?.parentElement;
+        if (!parent) {
+            return null;
+        }
+
         const spawnLocationX = Math.round(
-            Math.random() * ref.current.parentElement.scrollWidth - 80
+            Math.random() * parent.scrollWidth - 80
         );
         const spawnLocationY = Math.round(
-            Math.random() * ref.current.parentElement.scrollHeight - 80
+            Math.random() * parent.scrollHeight - 80
         );
         return [spawnLocationX + "px", spawnLocationY + "px"];
     }
 
     function animate(timestamp) {
-        if (prevTime === undefined) {
-            prevTime = timestamp;
+        if (prevTimeRef.current === undefined) {
+            prevTimeRef.current = timestamp;
         }
-        if (timestamp - prevTime > interval) {
+        if (timestamp - prevTimeRef.current > interval && ref.current) {
             const particle = document.createElement("div");
             particle.classList.add("sparkle");
             particle.onanimationend = () => particle.remove();
-            [
-                particle.style.left,
-                particle.style.top
-            ] = getRandomSpawnLocation();
-            ref.current.append(particle);
-            prevTime = timestamp;
+            const location = getRandomSpawnLocation();
+
+            if (location) {
+                [particle.style.left, particle.style.top] = location;
+                ref.current.append(particle);
+                prevTimeRef.current = timestamp;
+            }
         }
-        window.requestAnimationFrame(animate);
+        frameRef.current = window.requestAnimationFrame(animate);
     }
 
     useEffect(() => {
-        window.requestAnimationFrame(animate);
+        frameRef.current = window.requestAnimationFrame(animate);
+
+        return () => {
+            if (frameRef.current) {
+                window.cancelAnimationFrame(frameRef.current);
+            }
+        };
     }, []);
 
     return <div ref={ref} className="background"></div>;
 }
+
+AnimatedBackground.propTypes = {
+    interval: PropTypes.number,
+};
 
 // Contact Component
 export default function Contact() {
@@ -76,7 +94,7 @@ export default function Contact() {
                     ))}
                 </div>
                 <a
-                    href="https://drive.google.com/file/d/1g3I07OMh2gB8jeOTYlhziOd8J4jsfeSp/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Q020T49r3xbl_M42xJzF_LMpc8o2NJTH/view?usp=drive_link"
                     className="download-cv-button"
                     download
                 >

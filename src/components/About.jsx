@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import '../assets/styles/about.css'; // Make sure to create a CSS file for custom styling.
 import { fadeIn, textVariant } from "../components/utils/motion";
@@ -8,19 +8,18 @@ import Development from '../assets/images/development.png';
 import Content from '../assets/images/content.png';
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='service-card'>
+  <Tilt
+    className='service-card'
+    tiltMaxAngleX={45}
+    tiltMaxAngleY={45}
+    scale={1}
+    transitionSpeed={450}
+  >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='service-card-inner'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='service-card-content'
-      >
+      <div className='service-card-content'>
         <img
           src={icon}
           alt={title}
