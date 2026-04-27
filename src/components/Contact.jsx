@@ -94,7 +94,7 @@ export default function Contact() {
                     ))}
                 </div>
                 <a
-                    href="https://drive.google.com/file/d/1Q020T49r3xbl_M42xJzF_LMpc8o2NJTH/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1Q020T49r3xbl_M42xJzF_LMpc8o2NJTH/view?usp=sharing"
                     className="download-cv-button"
                     download
                 >
